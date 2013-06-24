@@ -14,6 +14,8 @@
 		0F133B2C1776F6C400EA5F19 /* XianXiDownLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F133B2B1776F6C400EA5F19 /* XianXiDownLoad.m */; };
 		0F133B2F1776FE5000EA5F19 /* SelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F133B2E1776FE5000EA5F19 /* SelectViewController.m */; };
 		0F133B321776FF2100EA5F19 /* HeadViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F133B311776FF2000EA5F19 /* HeadViews.m */; };
+		0F133B3C177728A900EA5F19 /* ViewControllerddd.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F133B3B177728A900EA5F19 /* ViewControllerddd.m */; };
+		0F133B411777350A00EA5F19 /* CellOfSelect.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F133B401777350A00EA5F19 /* CellOfSelect.m */; };
 		0FB19F1F17758BE400E1E936 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FB19F1E17758BE400E1E936 /* UIKit.framework */; };
 		0FB19F2117758BE400E1E936 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FB19F2017758BE400E1E936 /* Foundation.framework */; };
 		0FB19F2317758BE400E1E936 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FB19F2217758BE400E1E936 /* CoreGraphics.framework */; };
@@ -145,6 +147,11 @@
 		0F133B2E1776FE5000EA5F19 /* SelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectViewController.m; sourceTree = "<group>"; };
 		0F133B301776FF2000EA5F19 /* HeadViews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadViews.h; sourceTree = "<group>"; };
 		0F133B311776FF2000EA5F19 /* HeadViews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadViews.m; sourceTree = "<group>"; };
+		0F133B3617771BB200EA5F19 /* CreatHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreatHeadView.h; sourceTree = "<group>"; };
+		0F133B3A177728A900EA5F19 /* ViewControllerddd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerddd.h; sourceTree = "<group>"; };
+		0F133B3B177728A900EA5F19 /* ViewControllerddd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerddd.m; sourceTree = "<group>"; };
+		0F133B3F1777350900EA5F19 /* CellOfSelect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellOfSelect.h; sourceTree = "<group>"; };
+		0F133B401777350A00EA5F19 /* CellOfSelect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellOfSelect.m; sourceTree = "<group>"; };
 		0FB19F1B17758BE400E1E936 /* DV_HanZi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DV_HanZi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FB19F1E17758BE400E1E936 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0FB19F2017758BE400E1E936 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -313,6 +320,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F133B3D177733BC00EA5F19 /* ToolOfXianXi */ = {
+			isa = PBXGroup;
+			children = (
+				0F133B3617771BB200EA5F19 /* CreatHeadView.h */,
+				0F133B301776FF2000EA5F19 /* HeadViews.h */,
+				0F133B311776FF2000EA5F19 /* HeadViews.m */,
+				0FB1A0391775D16D00E1E936 /* MyLabel.h */,
+				0FB1A03A1775D16D00E1E936 /* MyLabel.m */,
+				0F133B211776C6B600EA5F19 /* XianXiViews.h */,
+				0F133B221776C6B600EA5F19 /* XianXiViews.m */,
+				0F133B2A1776F6C400EA5F19 /* XianXiDownLoad.h */,
+				0F133B2B1776F6C400EA5F19 /* XianXiDownLoad.m */,
+			);
+			name = ToolOfXianXi;
+			sourceTree = "<group>";
+		};
+		0F133B3E177733FE00EA5F19 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0FB19F4417758F2B00E1E936 /* HanZiJieSiManager.h */,
+				0FB19F4517758F2B00E1E936 /* HanZiJieSiManager.m */,
+				0FB19F4117758C9700E1E936 /* HanZiJieSi.h */,
+				0FB19F4217758C9700E1E936 /* HanZiJieSi.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
 		0FB19F1217758BE400E1E936 = {
 			isa = PBXGroup;
 			children = (
@@ -359,22 +393,16 @@
 				0FB19F3617758BE500E1E936 /* ViewController.h */,
 				0FB19F3717758BE500E1E936 /* ViewController.m */,
 				0FB19F3917758BE500E1E936 /* ViewController.xib */,
-				0FB19F4117758C9700E1E936 /* HanZiJieSi.h */,
-				0FB19F4217758C9700E1E936 /* HanZiJieSi.m */,
-				0FB19F4417758F2B00E1E936 /* HanZiJieSiManager.h */,
-				0FB19F4517758F2B00E1E936 /* HanZiJieSiManager.m */,
 				0FB19F861775A57F00E1E936 /* XianXiViewController.h */,
 				0FB19F871775A57F00E1E936 /* XianXiViewController.m */,
-				0F133B301776FF2000EA5F19 /* HeadViews.h */,
-				0F133B311776FF2000EA5F19 /* HeadViews.m */,
-				0FB1A0391775D16D00E1E936 /* MyLabel.h */,
-				0FB1A03A1775D16D00E1E936 /* MyLabel.m */,
-				0F133B211776C6B600EA5F19 /* XianXiViews.h */,
-				0F133B221776C6B600EA5F19 /* XianXiViews.m */,
-				0F133B2A1776F6C400EA5F19 /* XianXiDownLoad.h */,
-				0F133B2B1776F6C400EA5F19 /* XianXiDownLoad.m */,
+				0F133B3E177733FE00EA5F19 /* Data */,
+				0F133B3D177733BC00EA5F19 /* ToolOfXianXi */,
 				0F133B2D1776FE5000EA5F19 /* SelectViewController.h */,
 				0F133B2E1776FE5000EA5F19 /* SelectViewController.m */,
+				0F133B3F1777350900EA5F19 /* CellOfSelect.h */,
+				0F133B401777350A00EA5F19 /* CellOfSelect.m */,
+				0F133B3A177728A900EA5F19 /* ViewControllerddd.h */,
+				0F133B3B177728A900EA5F19 /* ViewControllerddd.m */,
 				0FB19F2517758BE400E1E936 /* Supporting Files */,
 			);
 			path = DV_HanZi;
@@ -716,6 +744,8 @@
 				0F133B2C1776F6C400EA5F19 /* XianXiDownLoad.m in Sources */,
 				0F133B2F1776FE5000EA5F19 /* SelectViewController.m in Sources */,
 				0F133B321776FF2100EA5F19 /* HeadViews.m in Sources */,
+				0F133B3C177728A900EA5F19 /* ViewControllerddd.m in Sources */,
+				0F133B411777350A00EA5F19 /* CellOfSelect.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

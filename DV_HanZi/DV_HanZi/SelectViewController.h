@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SelectViewController : UIViewController
+@interface SelectViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+
+
+@property (retain, nonatomic) UITableView *selectedTable;
 
 @end

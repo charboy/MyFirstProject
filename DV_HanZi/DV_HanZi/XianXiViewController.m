@@ -13,6 +13,9 @@
 #import "HanZiJieSi.h"
 #import "XianXiDownLoad.h"
 #import "HeadViews.h"
+#import "SelectViewController.h"
+
+
 
 @interface XianXiViewController ()
 
@@ -108,59 +111,52 @@
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"beijing.png"]];
     
     //导航
-    self.headView = [HeadViews creatHeadViewLitfImg:@"return.png" andLifSomeImg:@"top.png" andRightImg:@"home.png" andRightSomeImg:@"top.png" andHeadTitle:self.headTitle];
+    self.headView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 45)];
+    self.headView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"calligrapher.png"]];
     [self.view addSubview:self.headView];
+    //左
+    UIView *liftView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 61, 44)];
+    [self.headView addSubview:liftView];
+    UIButton *liftBt = [UIButton buttonWithType:UIButtonTypeCustom];
+    liftBt.frame = CGRectMake((61-22)/2, (44-21)/2, 22, 21);
+    [liftBt setBackgroundImage:[UIImage imageNamed:@"return.png"] forState:UIControlStateNormal];
+    [liftBt addTarget:self action:@selector(back ) forControlEvents:UIControlEventTouchUpInside];
+    [liftView addSubview:liftBt];
+    UIView *liftLine = [[UIView alloc]initWithFrame:CGRectMake(61, 0, 1, 44)];
+    [liftLine setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"top.png"]]];
     
-//    //导航
-//    self.headView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 45)];
-//    self.headView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"calligrapher.png"]];
-//    [self.view addSubview:self.headView];
-//    //左
-//    UIView *liftView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 61, 44)];
-//    [self.headView addSubview:liftView];
-//    UIButton *liftBt = [UIButton buttonWithType:UIButtonTypeCustom];
-//    liftBt.frame = CGRectMake((61-22)/2, (44-21)/2, 22, 21);
-//    [liftBt setBackgroundImage:[UIImage imageNamed:@"return.png"] forState:UIControlStateNormal];
-//    [liftBt addTarget:self action:@selector(back ) forControlEvents:UIControlEventTouchUpInside];
-//    [liftView addSubview:liftBt];
-//    UIView *liftLine = [[UIView alloc]initWithFrame:CGRectMake(61, 0, 1, 44)];
-//    [liftLine setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"top.png"]]];
-//    
-//    [self.headView addSubview:liftLine];
-//    
+    [self.headView addSubview:liftLine];
+//
 //    //右
-//    UIView *rightView = [[UIView alloc]initWithFrame:CGRectMake(320-61, 0, 61, 44)];
-//    //rightView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"enter.png"]];
-//    [self.headView addSubview:rightView];
-//    UIButton *rightBt = [UIButton buttonWithType:UIButtonTypeCustom];
-//    rightBt.frame = CGRectMake((61-22)/2, (44-21)/2, 22, 21);
-//    [rightBt setBackgroundImage:[UIImage imageNamed:@"home.png"] forState:UIControlStateNormal];
-//    [rightView addSubview:rightBt];
-//    [rightBt addTarget:self action:@selector(home) forControlEvents:UIControlEventTouchUpInside];
-//    UIView *rightLine = [[UIView alloc]initWithFrame:CGRectMake(320-61, 0, 1, 44)];
-//    [rightLine setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"top.png"]]];
-//    [self.headView addSubview:rightLine];
+    UIView *rightView = [[UIView alloc]initWithFrame:CGRectMake(320-61, 0, 61, 44)];
+    //rightView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"enter.png"]];
+    [self.headView addSubview:rightView];
+    UIButton *rightBt = [UIButton buttonWithType:UIButtonTypeCustom];
+    rightBt.frame = CGRectMake((61-22)/2, (44-21)/2, 22, 21);
+    [rightBt setBackgroundImage:[UIImage imageNamed:@"home.png"] forState:UIControlStateNormal];
+    [rightView addSubview:rightBt];
+    [rightBt addTarget:self action:@selector(home) forControlEvents:UIControlEventTouchUpInside];
+    UIView *rightLine = [[UIView alloc]initWithFrame:CGRectMake(320-61, 0, 1, 44)];
+    [rightLine setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"top.png"]]];
+    [self.headView addSubview:rightLine];
+    
+    UIView *dividLine = [[UIView alloc]initWithFrame:CGRectMake(0, 45, 320, 1)];
+    [dividLine setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"dividing-line.png"]]];
+    [self.view addSubview:dividLine];
+//
+    //标题
+    UILabel *headTitle = [[UILabel alloc]initWithFrame:CGRectMake(60, 5, 200, 34)];
+    headTitle.textAlignment = NSTextAlignmentCenter;
+    headTitle.backgroundColor = [UIColor clearColor];
+    headTitle.text = @"呵呵呵";
+    [self.headView addSubview:headTitle];
 //    
-//    UIView *dividLine = [[UIView alloc]initWithFrame:CGRectMake(0, 45, 320, 1)];
-//    [dividLine setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"dividing-line.png"]]];
-//    [self.view addSubview:dividLine];
-//    
-//    //标题
-//    UILabel *headTitle = [[UILabel alloc]initWithFrame:CGRectMake(60, 5, 200, 34)];
-//    headTitle.textAlignment = NSTextAlignmentCenter;
-//    headTitle.backgroundColor = [UIColor clearColor];
-//    headTitle.text = @"呵呵呵";
-//    [self.headView addSubview:headTitle];
-//    
-//    
-//    //
-//    
-//    [rightLine release];
-//    [liftLine release];
-//    [dividLine release];
-//    [rightView release];
-//    [liftView release];
-//    [headTitle release];
+    [rightLine release];
+    [liftLine release];
+    [dividLine release];
+    [rightView release];
+    [liftView release];
+    [headTitle release];
     
     //页签效果
     self.footView = [[UIView alloc]initWithFrame:CGRectMake(0, 460-45, 320, 45)];
@@ -200,6 +196,21 @@
     [_fenXian addGestureRecognizer:tap3];
     
 }
+
+- (void)home
+{
+    NSLog(@"home");
+}
+
+- (void)back
+{
+    //SelectViewController *select = [[SelectViewController alloc]init];
+    [self dismissViewControllerAnimated:YES completion:^{
+        nil;
+    }];
+    
+}
+
 //书法家
 - (void)changeBackImg:(UITapGestureRecognizer*)sender
 {
@@ -331,13 +342,14 @@
 }
 
 
-- (void)back{
-    NSLog(@"back->");
-}
 
-- (void)home{
-    NSLog(@"home->");
-}
+//- (void)back{
+//    NSLog(@"back->");
+//}
+//
+//- (void)home{
+//    NSLog(@"home->");
+//}
 
 
 

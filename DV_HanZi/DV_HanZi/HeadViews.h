@@ -7,23 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CreatHeadView.h"
 
-@protocol goBackOrNext <NSObject>
-
-@optional
-- (void) goBack;
-- (void) goNext;
-
-@end
 
 @interface HeadViews : NSObject
 
-@property (assign,nonatomic) id<goBackOrNext>goDaleget;//翻页协议
+@property (assign,nonatomic) id<CreatHeadView>goDaleget;//翻页协议
 
-+ (UIView *) creatHeadViewLitfImg:(NSString *)lImgName
-                    andLifSomeImg:(NSString *) slImagName
-                      andRightImg:(NSString *)rImgName
-                  andRightSomeImg:(NSString *)srImagName
-                     andHeadTitle:(NSString *)aTitle;
+
++ (UIView *) creatLifSomeImg:(NSString *)slImagName
+             andRightSomeImg:(NSString *)srImagName
+                andHeadTitle:(NSString *)aTitle;
+
 
 @end

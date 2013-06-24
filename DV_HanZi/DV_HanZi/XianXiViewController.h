@@ -9,12 +9,14 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import "ASIHTTPRequest.h"
+#import "CreatHeadView.h"
+
 
 @class MyLabel;
 @class HanZiJieSi;
 @class HanZiJieSiManager;
 
-@interface XianXiViewController : UIViewController<AVAudioPlayerDelegate,ASIHTTPRequestDelegate>//播放器的协议
+@interface XianXiViewController : UIViewController<AVAudioPlayerDelegate,ASIHTTPRequestDelegate,CreatHeadView>//播放器的协议
 
 @property (retain, nonatomic) UIView *headView;
 @property (retain, nonatomic) UIView *footView;
@@ -25,6 +27,9 @@
 @property (retain, nonatomic) UIView *fenXian;//分享
 @property (retain, nonatomic) MyLabel *myLabel;
 @property (copy, nonatomic) NSString *headTitle;//导航栏标题
+
+
+
 //拼音等
 @property (retain, nonatomic) UILabel *pinYin;
 @property (retain, nonatomic) UILabel *fanTi;

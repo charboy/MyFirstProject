@@ -10,7 +10,7 @@
 
 #import "ViewController.h"
 #import "XianXiViewController.h"
-
+#import "SelectViewController.h"
 
 @implementation AppDelegate
 
@@ -26,9 +26,9 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     self.viewController = [[[ViewController alloc] initWithNibName:@"ViewController" bundle:nil] autorelease];
-    XianXiViewController *xianxi = [[[XianXiViewController alloc]init]autorelease];
-    
-    self.window.rootViewController = xianxi;
+    //XianXiViewController *xianxi = [[[XianXiViewController alloc]init]autorelease];
+    SelectViewController *select = [[[SelectViewController alloc]init]autorelease];
+    self.window.rootViewController = select;
     [self.window makeKeyAndVisible];
     return YES;
 }
